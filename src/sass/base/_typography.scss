@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.heading {
+  font-weight: $default-font-weight-bold;
+  font-size: scaleSize(1.25rem, 1.75rem);
+  line-height: scaleSize(1.6875rem, 2.375rem);
+  color: $color-text-dark;
+}
+
+.paragraph {
+  font-size: scaleSize(0.8125rem, 0.9375rem);
+  line-height: scaleSize(1.4375rem, 1.3125rem);
+}

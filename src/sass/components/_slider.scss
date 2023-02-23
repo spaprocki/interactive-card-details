@@ -1,0 +1,48 @@
+@use "../abstracts/index" as *;
+
+@mixin slider-thumb-styles {
+    -webkit-appearance: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: $color-bg-slider;
+    background-image: url("../assets/icon-slider.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.375rem 0.8125rem;
+    box-shadow: 0rem 0.9375rem 1.875rem rgba(0, 255, 231, 0.6);
+    border-radius: 50%;
+    border: none;
+
+    &:hover {
+        background-color: $color-bg-slider-hover;
+        cursor: grab;
+    }
+
+    &:active {
+        background-color: $color-bg-slider-grab;
+        cursor: grabbing;
+    }
+}
+
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 0.5rem;
+    border-radius: 0.3125rem;
+    background: linear-gradient(90deg, $color-bg-slider-bar-full 50%, $color-bg-slider-bar 50%);
+    cursor: pointer;
+
+    @include focus-styles($color-bg-slider, 1.0938rem);
+
+    &::-webkit-slider-thumb {
+        @include slider-thumb-styles;
+    }
+
+    &::-moz-range-thumb {
+        @include slider-thumb-styles;
+    }
+
+    &::-ms-thumb {
+        @include slider-thumb-styles;
+    }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <section class="card-details">
+        <div
+          class="card-details__card-preview card-preview"
+          role="presentation"
+        >
+          <div class="card-preview__card-back card-back">
+            <p class="card-back__cvc">000</p>
+          </div>
+
+          <div class="card-preview__card-front card-front">
+            <p class="card-front__card-number">0000 0000 0000 0000</p>
+            <p class="card-front__name">Jane Appleseed</p>
+            <p class="card-front__date">00/00</p>
+          </div>
+          <img
+            src="/assets/bg-card-back.png"
+            alt=""
+            class="card-details__img-card--back"
+          />
+        </div>
+        <span class="u-sr-only"
+          >All fields marked “required” must be completed.</span
+        >
+        <form class="card-details__form form">
+          <div class="form-control form-control--name">
+            <label class="form-control__label--name" id="nameLabel" for="name"
+              >Cardholder Name:</label
+            >
+            <input
+              class="form-control__input--name"
+              id="name"
+              type="text"
+              autocomplete="name"
+              placeholder="e.g. Jane Appleseed"
+              aria-labelledby="nameLabel"
+              aria-describedby="nameDesc"
+              required
+              aria-required="true"
+            />
+            <span class="u-sr-only" id="nameDesc"
+              >Name must be at least 2 characters long</span
+            >
+          </div>
+
+          <div class="form-control form-control--number">
+            <label
+              class="form-control__label--number"
+              id="numberLabel"
+              for="number"
+              >Card Number:</label
+            >
+            <input
+              class="form-control__input--number"
+              id="number"
+              type="number"
+              autocomplete="cc-number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              aria-labelledby="numberLabel"
+              aria-describedby="numberDesc"
+              required
+              aria-required="true"
+            />
+            <span class="u-sr-only" id="numberDesc"
+              >Card number must have exactly 16 digits</span
+            >
+          </div>
+
+          <div class="form__date-cvc-container">
+            <fieldset class="form__fieldset">
+              <legend class="form-control__label--date">
+                Exp. Date (MM/YY)
+              </legend>
+              <input
+                class="form__input--month"
+                aria-label="month"
+                id="month"
+                name="month"
+                autocomplete="cc-exp-month"
+                placeholder="MM"
+                aria-describedby="monthDesc"
+                required
+                aria-required="true"
+                pattern="[0-9]{2}"
+              />
+              <span class="u-sr-only" id="monthDesc"
+                >Month must be in MM format</span
+              >
+
+              <label class="form__label--year" for="year">Year</label>
+              <input
+                class="form__label--year"
+                aria-label="year"
+                id="year"
+                name="year"
+                autocomplete="cc-exp-year"
+                placeholder="YY"
+                aria-describedby="yearDesc"
+                required
+                aria-required="true"
+                pattern="[0-9]{2}"
+              />
+              <span class="u-sr-only" id="yearDesc"
+                >Year must be in YY format</span
+              >
+            </fieldset>
+
+            <div class="formcontrol formcontrol--cvc">
+              <label class="form-control__label--cvc" id="cvcLabel" for="cvc"
+                >CVC</label
+              >
+              <input
+                class="form-control__input--cvc"
+                id="cvc"
+                type="cvc"
+                autocomplete="cc-number"
+                placeholder="e.g. 123"
+                aria-labelledby="cvcLabel"
+                aria-describedby="cvcDesc"
+                required
+                aria-required="true"
+              />
+              <span class="u-sr-only" id="cvcDesc"
+                >CVC must have exactly 3 digits</span
+              >
+            </div>
+          </div>
+
+          <button class="form__btn btn" type="submit">Confirm</button>
+        </form>
+      </section>
+    </main>
+
+    Thank you! We've added your card details Continue
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

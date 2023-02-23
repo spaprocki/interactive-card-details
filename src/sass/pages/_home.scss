@@ -1,0 +1,6 @@
+@use "../abstracts" as *;
+
+.main {
+    @include flex-column-align-center;
+    width: 100%;
+}

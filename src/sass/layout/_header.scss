@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+.header {
+  @include flex-column-align-center;
+  z-index: 1;
+  width: 100%;
+  border-radius: 0rem 0rem 0rem 11.9688rem;
+  padding-top: scaleSize(3.5625rem, 4.1875rem);
+  padding-bottom: scaleSize(12.375rem, 14.8125rem);
+  background-color: $color-bg-header;
+
+  &__textbox {
+    width: 100%;
+    padding-top: scaleSize(2rem, 2.3125rem);
+    padding-bottom: scaleSize(2rem, 2.3125rem);
+    background-image: url("../assets/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

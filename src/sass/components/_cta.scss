@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+.cta {
+    @include flex-column-align-center;
+    padding-top: scaleSize(1.5rem, 2rem);
+    padding: scaleSize(1.5rem, 2rem) scaleSize(1.5rem, 3rem) 2rem scaleSize(1.5rem, 2.5rem);
+
+    @include respond(big-screen) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__features {
+        list-style-type: none;
+    }
+
+    &__btn {
+        margin-top: 2rem;
+
+        @include respond(big-screen) {
+            margin-top: 0;
+        }
+    }
+}

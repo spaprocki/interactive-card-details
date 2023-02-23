@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.textbox {
+    @include flex-column-align-center;
+    text-align: center;
+
+    & .paragraph {
+        margin-top: scaleSize(0.5rem, 0.75rem);
+        width: 11.25rem;
+
+        @include respond(medium-screen) {
+            width: 22.9375rem;
+        }
+    }
+}
